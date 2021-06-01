@@ -3,10 +3,10 @@ from .models import FinstaEntry, User
 
 
 class FinstaEntrySerializer(serializers.ModelSerializer):
-    user_name = serializers.StringRelatedField(
-        source='user',
-        read_only=True
-    )
+    # user_name = serializers.StringRelatedField(
+    #     source='user',
+    #     read_only=True
+    # )
 
     class Meta:
         model = FinstaEntry

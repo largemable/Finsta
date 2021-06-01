@@ -18,6 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
-    path('', include('finsta.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('djoser/', include('djoser.urls')),
+    path('djoser-auth/', include('djoser.urls.authtoken')),
+    path('finsta-api/', include('finsta.urls')),
 ]

@@ -1,8 +1,10 @@
 # users/urls.py
+from rest_framework.routers import DefaultRouter
 from django.urls import path, include
-from finsta import views
+from .views import FinstaEntryViewSet
 
+router = DefaultRouter()
+router.register(r'entries', FinstaEntryViewSet)
 urlpatterns = [
-    path('', include('djoser.urls')),
-    path('', include('djoser.urls.authtoken'))
+    path('', include(router.urls)),
 ]
