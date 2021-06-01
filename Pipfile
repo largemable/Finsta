@@ -12,6 +12,8 @@ djoser = "*"
 django-cors-headers = "*"
 whitenoise = "*"
 pillow = "*"
+djangorestframework = "*"
+pygments = "*"
 
 [dev-packages]
 
