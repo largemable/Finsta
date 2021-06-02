@@ -7,7 +7,7 @@ class FinstaEntry(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.TextField()
     caption = models.TextField()
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True, upload_to='static')
 
     def __str__(self):
         return self.title
