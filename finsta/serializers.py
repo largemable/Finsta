@@ -10,7 +10,7 @@ class FinstaEntrySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FinstaEntry
-        fields = ['id', 'title', 'caption', 'image']
+        fields = ['id', 'title', 'caption', 'image', 'user']
 
 
 class UserSerializer(serializers.ModelSerializer):

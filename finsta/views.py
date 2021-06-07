@@ -4,6 +4,11 @@ from .models import FinstaEntry
 from .serializers import FinstaEntrySerializer
 from django.views import View
 from django.http import HttpResponse
+
+
+class FinstaImageUploadView(View):
+    def post(self, request, *args, **kwargs):
+        return HttpResponse('Hello World')
 # Create your views here.
 
 
