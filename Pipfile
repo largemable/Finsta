@@ -16,6 +16,7 @@ djangorestframework = "*"
 pygments = "*"
 django-rest-auth = "*"
 django-allauth = "*"
+django-heroku = "*"
 
 [dev-packages]
 
