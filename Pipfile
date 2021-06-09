@@ -14,6 +14,8 @@ whitenoise = "*"
 pillow = "*"
 djangorestframework = "*"
 pygments = "*"
+django-rest-auth = "*"
+django-allauth = "*"
 
 [dev-packages]
 
