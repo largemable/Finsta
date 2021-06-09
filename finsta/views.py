@@ -4,17 +4,17 @@ from .models import FinstaEntry
 from .serializers import FinstaEntrySerializer
 from django.views import View
 from django.http import HttpResponse
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.models import Token
+import logging as LOG
 
-
-class FinstaImageUploadView(View):
-    def post(self, request, *args, **kwargs):
-        return HttpResponse('Hello World')
 # Create your views here.
 
 
 class FinstaEntryViewSet(viewsets.ModelViewSet):
-    queryset = FinstaEntry.objects.all()
-    # def get_queryset(self):
-    #     user = self.request.user
-    #     return FinstaEntry.objects.filter(user=user)
+    def get_queryset(self):
+        print(f'USERNAME IS {self.request.user.username}')
+        user = self.request.user
+        return FinstaEntry.objects.filter(user=user)
     serializer_class = FinstaEntrySerializer

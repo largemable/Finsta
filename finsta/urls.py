@@ -4,7 +4,7 @@ from django.urls import path, include
 from .views import FinstaEntryViewSet
 
 router = DefaultRouter()
-router.register(r'entries', FinstaEntryViewSet)
+router.register(r'entries', FinstaEntryViewSet, basename='entries')
 urlpatterns = [
     path('', include(router.urls)),
 ]
