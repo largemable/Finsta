@@ -29,9 +29,9 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True if os.environ['MODE'] == 'dev' else False
 CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000'
+# ]
 
 # Application definition
 
