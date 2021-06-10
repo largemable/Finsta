@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'finsta',
     'corsheaders',
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # new
     'rest_auth.registration',
     'users',
-
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -159,12 +160,21 @@ STATICFILES_FINDERS = (
 STATICFILES_DIRS = [
     f'{BASE_DIR}/static/'
 ]
-# STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'ha8k1wm5k',
+    'API_KEY': '882479877373181',
+    'API_SECRET': '1WejbN5L0jkCmGSA9_JXzJJWlXM',
+}
+
+# put these in env later
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())

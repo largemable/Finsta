@@ -17,6 +17,8 @@ pygments = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 django-heroku = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
 
 [dev-packages]
 
