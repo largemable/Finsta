@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'cloudinary_storage',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'finsta',
     'corsheaders',
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # new
     'rest_auth.registration',
     'users',
-    # 'cloudinary'
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -151,7 +151,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 MEDIA_ROOT = ''
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 # STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_FINDERS = (
@@ -176,6 +176,6 @@ CLOUDINARY_STORAGE = {
 
 # put these in env later
 
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 django_heroku.settings(locals())
