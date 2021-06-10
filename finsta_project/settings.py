@@ -152,7 +152,7 @@ USE_TZ = True
 
 MEDIA_ROOT = ''
 MEDIA_URL = '/media/'
-# STATIC_ROOT = ''
+
 STATIC_URL = '/static/'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -168,11 +168,9 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'ha8k1wm5k',
-    'API_KEY': '882479877373181',
-    'API_SECRET': '1WejbN5L0jkCmGSA9_JXzJJWlXM',
-}
+CLOUD_NAME: os.environ['CLOUD_NAME']
+API_KEY: os.environ['API_KEY']
+API_SECRET: os.environ['API_SECRET']
 
 # put these in env later
 
